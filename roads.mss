@@ -256,7 +256,17 @@ come in as well.
     [stylegroup='motorway'] { line-width: @rdz15_maj; }
     [stylegroup='mainroad'] { line-width: @rdz15_med; }
     [stylegroup='minorroad']{ line-width: @rdz15_min; }
-    [stylegroup='service']  { line-width: @rdz15_min / 3; }
+    [stylegroup='service']  { line-width: @rdz15_min / 3;
+        ::case{
+    		line-color: gray;
+        	line-dasharray:4,5;
+        	line-width:@rdz15_min / 3 + 2;
+    	}
+      	::fill {
+      		line-width: (@rdz15_min / 3 + 2)/2;
+      		line-color:white;
+    	}
+    }
     [stylegroup='noauto']   { line-width: @rdz15_min / 4; line-dasharray: 1,1; }
     [stylegroup='railway']  { line-width: 1.5; }
   }
@@ -264,7 +274,18 @@ come in as well.
     [stylegroup='motorway'] { line-width: @rdz16_maj; }
     [stylegroup='mainroad'] { line-width: @rdz16_med; }
     [stylegroup='minorroad']{ line-width: @rdz16_min; }
-    [stylegroup='service']  { line-width: @rdz16_min / 3; }
+    [stylegroup='service']  { line-width: @rdz16_min / 3;
+    	::case{
+    		line-color: gray;
+        	line-dasharray:4,5;
+        	line-width:@rdz16_min / 3 + 2;
+    	}
+      	::fill {
+      		line-width: (@rdz16_min / 3 + 2)/2;
+      		line-color:white;
+    	}
+    
+    }
     [stylegroup='noauto']   { line-width: @rdz16_min / 4; line-dasharray: 2,1; }
     [stylegroup='railway']  { line-width: 2; }
   }
@@ -272,7 +293,17 @@ come in as well.
     [stylegroup='motorway'] { line-width: @rdz17_maj; }
     [stylegroup='mainroad'] { line-width: @rdz17_med; }
     [stylegroup='minorroad']{ line-width: @rdz17_min; }
-    [stylegroup='service']  { line-width: @rdz17_min / 3; }
+    [stylegroup='service']  { line-width: @rdz17_min / 3; 
+        ::case{
+          line-color: gray;
+              line-dasharray:4,5;
+              line-width:@rdz17_min / 3 + 2;
+          }
+        ::fill {
+        	line-width: (@rdz17_min / 3 + 2)/2;
+        	line-color:white;
+      	}
+    }
     [stylegroup='noauto']   { line-width: @rdz17_min / 4; line-dasharray: 2,2; }
     [stylegroup='railway']  { line-width: 3; }
   }
