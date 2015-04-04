@@ -275,4 +275,15 @@ text-allow-overlap:true;
     }
 }
 
+Map {
+  background-color: white;
+  buffer-size: 512;
+}
+
+
+#landuse[zoom>12] {
+
+  [type='forest']        { polygon-pattern-file:url(./img/trees.png);}
+ }
+
 

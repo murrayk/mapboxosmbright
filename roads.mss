@@ -248,7 +248,17 @@ come in as well.
     [stylegroup='motorway'] { line-width: @rdz14_maj; }
     [stylegroup='mainroad'] { line-width: @rdz14_med; }
     [stylegroup='minorroad']{ line-width: @rdz14_min; }
-    [stylegroup='service']  { line-width: @rdz14_min / 3; }
+    [stylegroup='service']  { line-width: @rdz14_min / 3;
+        ::case{
+    		line-color: gray;
+        	line-dasharray:3,3;
+        	line-width:@rdz14_min / 3 + 2;
+    	}
+      	::fill {
+      		line-width: (@rdz14_min / 3 + 2)/2;
+      		line-color:white;
+    	}
+    }
     [stylegroup='noauto']   { line-width: @rdz14_min / 4; line-dasharray: 1,1; }
     [stylegroup='railway']  { line-width: 1; }
   }
@@ -259,7 +269,7 @@ come in as well.
     [stylegroup='service']  { line-width: @rdz15_min / 3;
         ::case{
     		line-color: gray;
-        	line-dasharray:4,5;
+        	line-dasharray:4,4;
         	line-width:@rdz15_min / 3 + 2;
     	}
       	::fill {
